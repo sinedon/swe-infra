@@ -30,6 +30,8 @@ k8s_yaml([
     "mongo-deployment.yaml",
     "postgre-deployment.yaml",
     "rabbitmq-deployment.yaml",
+    "redis.yml",
+    "keycloak.yml",
     "ingress.yaml"
 ])
 

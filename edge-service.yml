@@ -20,11 +20,19 @@ spec:
             - containerPort: 8080
           env:
             - name: SPRING_PROFILES_ACTIVE
-              value: git
+              value: docker
+
             - name: CONTENT_SERVICE_URL
               value: http://content-manager
+
             - name: PROGRESS_SERVICE_URL
               value: http://progress-manager
+
+            - name: KEYCLOAK_CLIENT_SECRET
+              value: edge-secret-dev-123
+
+            - name: KEYCLOAK_ISSUER_URI
+              value: http://localhost:8080/realms/picture-dictionary
 ---
 apiVersion: v1
 kind: Service
