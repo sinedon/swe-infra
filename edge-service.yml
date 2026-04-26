@@ -32,7 +32,7 @@ spec:
               value: edge-secret-dev-123
 
             - name: KEYCLOAK_ISSUER_URI
-              value: http://localhost:8080/realms/picture-dictionary
+              value: http://keycloak:8080/realms/picture-dictionary
 ---
 apiVersion: v1
 kind: Service
