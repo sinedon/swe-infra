@@ -6,8 +6,6 @@ Access your app at: http://localhost
 -----------------------------------------------------------------
 """.strip())
 
-k8s_yaml('https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/cloud/deploy.yaml')
-
 docker_build("sinedon/ui", "../swe-ui")
 docker_build("sinedon/edge-service", "../swe-edge-service")
 docker_build("sinedon/content-access", "../swe-content-access")
