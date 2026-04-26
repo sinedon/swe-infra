@@ -51,7 +51,11 @@ Running the Project (Tilt - Recommended)
 git clone https://github.com/SWE-PictureDictionary/swe-infra
 cd swe-infra
 
-2. Start Tilt
+2. Install Ingress Controller
+
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/cloud/deploy.yaml
+
+3. Start Tilt
 tilt up
 
 This will:
