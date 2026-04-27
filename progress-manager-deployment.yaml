@@ -23,8 +23,8 @@ spec:
           env:
             - name: SPRING_PROFILES_ACTIVE
               value: k8s
-            - name: CONTENT_ACCESS_URL
-              value: http://content-access
+            - name: CONTENT_MANAGER_URL
+              value: http://content-manager
             - name: PROGRESS_ACCESS_URL
               value: http://progress-access
             - name: COMPLETION_ENGINE_URL
