@@ -26,6 +26,7 @@ data:
           "redirectUris": [
             "http://localhost/*",
             "http://localhost:8080/*",
+            "http://auth.localhost/*",
             "http://edge-service/*"
           ],
           "webOrigins": [
@@ -106,15 +107,15 @@ spec:
             - name: KC_BOOTSTRAP_ADMIN_PASSWORD
               value: admin
             - name: KC_HOSTNAME
-              value: http://keycloak:8080
+              value: http://auth.localhost
             - name: KC_HOSTNAME_DEBUG
               value: "true"
             - name: KC_HOSTNAME_STRICT
               value: "false"
             - name: KC_HOSTNAME_BACKCHANNEL_DYNAMIC
               value: "true"
-            - name: KC_PROXY
-              value: edge
+            - name: KC_PROXY_HEADERS
+              value: xforwarded
           volumeMounts:
             - name: realm
               mountPath: /opt/keycloak/data/import/realm-export.json
@@ -142,6 +143,7 @@ kind: Ingress
 metadata:
   name: keycloak-ingress
 spec:
+  ingressClassName: nginx
   rules:
     - host: auth.localhost
       http:
