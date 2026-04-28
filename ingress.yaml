@@ -32,6 +32,14 @@ spec:
                 port:
                   number: 80
 
+          - path: /logout
+            pathType: Exact
+            backend:
+              service:
+                name: edge-service
+                port:
+                  number: 80
+
           - path: /
             pathType: Prefix
             backend:
